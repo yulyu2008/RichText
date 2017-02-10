@@ -3,14 +3,14 @@
 
 	我是夏雨,这是<a href="http://blog.csdn.net/yulyu">我的博客</a>,<br/>更多android技术分享<a href="http://blog.csdn.net/yulyu">就在这里</a>
 我们要显示这段文字,并且获取里面的a标签的点击事件,效果如下
-![image](imgs/text.gif)
+![这里写图片描述](http://img.blog.csdn.net/20160818210436730)
 
-其实android自带的textview就能够解析很多标签,只用简单设置一下
+其实android自带的textview就能够解析很多标签,只需要简单设置一下
 
         mTv.setText(Html.fromHtml(url));//解析html
         mTv.setMovementMethod(LinkMovementMethod.getInstance());//设置可点击
-  ![image](imgs/demo1.gif)     
- 这样是默认用浏览器打开a标签里面的链接,但是如果要获取到a标签的点击事件和链接的话,得换一个方法
+  ![夏雨](http://img.blog.csdn.net/20160818210536878)
+ 这样默认是用浏览器打开a标签里面的链接,但是如果要获取到a标签的点击事件和链接的话,得换一个方法
 #####1 .在textview的布局文件里面加入这个属性
 
 	android:autoLink="all"
@@ -55,8 +55,9 @@
 	mTv.setText(getClickableHtml(url));
 	mTv.setMovementMethod(LocalLinkMovementMethod.getInstance());
 这样就能够有如下效果啦,很简单吧.
-![image](imgs/text.gif)
+![夏雨](http://img.blog.csdn.net/20160818210436730)
 
 今天就先这样吧,在后续的文章中我会再总结一下更复杂的标签解析,比如表情,a标签以及超链接同时存在的情况.
 
 虽然这篇文章很简单,但也希望能够给你带来一点点收获 o(∩_∩)o 
+
